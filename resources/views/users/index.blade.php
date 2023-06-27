@@ -15,7 +15,7 @@
     <table class="table table-bordered data-table">
         <thead>
             <tr>
-                <th>No</th>
+
                 <th>Name</th>
                 <th>Email</th>
                 <th>Role</th>
@@ -39,10 +39,12 @@
           serverSide: true,
           ajax: "{{ route('users.index') }}",
           columns: [
-              {data: 'id', name: 'id'},
+
               {data: 'name', name: 'name'},
               {data: 'email', name: 'email'},
               {data: 'role_type', name: 'role_type'},
+              {data: 'role.contact_no', name: 'contact_no',searchable:false},
+              {data: 'role.address', name: 'address', searchable:false},
 
           ]
       });
